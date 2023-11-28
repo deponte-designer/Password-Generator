@@ -25,7 +25,7 @@ Successfully executed the following tasks using JavaScript:
 - Included screenshots to visually represent the generated password.
 - Encouraged exploration of the codebase and generator results.
 
-Feel free to explore the codebase and experiment with the password generator to create secure and tailored passwords.
+> Feel free to explore the codebase and experiment with the password generator to create secure and tailored passwords.
 
 
 ## Screenshot
