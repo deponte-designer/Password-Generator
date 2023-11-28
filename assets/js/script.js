@@ -125,6 +125,9 @@ function getPasswordOptions() {
   // Confirm the inclusion of uppercase characters
   var includeUpper = confirm("Include uppercase characters?");
 
+  // Confirm the inclusion of numeric characters
+  var includeNumeric = confirm("Include numeric characters?");
+
 
 
   // Return an object with user choices
@@ -132,6 +135,7 @@ function getPasswordOptions() {
     passwordLength: passwordLength,
     includeLower: includeLower,
     includeUpper: includeUpper,
+    includeNumeric: includeNumeric,
 
   };
 
@@ -156,6 +160,10 @@ function generatePassword() {
 
   if (options.includeUpper) {
     allChars = allChars.concat(upperCasedCharacters);
+  }
+
+  if (options.includeNumeric) {
+    allChars = allChars.concat(numericCharacters);
   }
 
   
