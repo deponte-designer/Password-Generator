@@ -99,7 +99,7 @@ var upperCasedCharacters = [
 
 //  Character types:
 // * Lowercase
-// ! Uppercase
+// * Uppercase
 // ! Numeric
 // ! Special characters ($@%&*, etc)
 
@@ -122,11 +122,16 @@ function getPasswordOptions() {
   var includeLower = confirm("Include lowercase characters?");
   console.log();
 
+  // Confirm the inclusion of uppercase characters
+  var includeUpper = confirm("Include uppercase characters?");
+
+
 
   // Return an object with user choices
   return {
     passwordLength: passwordLength,
     includeLower: includeLower,
+    includeUpper: includeUpper,
 
   };
 
@@ -149,7 +154,11 @@ function generatePassword() {
     allChars = allChars.concat(lowerCasedCharacters);
   }
 
+  if (options.includeUpper) {
+    allChars = allChars.concat(upperCasedCharacters);
+  }
 
+  
 
   for (var i = 0; i < options.passwordLength; i++) {
     var randomChar = getRandom(allChars);
@@ -169,7 +178,7 @@ function writePassword() {
   var passwordText = document.querySelector('#password');
 
   passwordText.value = password;
-  
+
   console.log("Your generated password is:\n" + password);
 }
 
