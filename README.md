@@ -7,6 +7,27 @@ This application allows users to generate secure passwords by selecting various 
 The application runs in the browser and features dynamically updated HTML and CSS powered by JavaScript.
 
 
+## Tasks Completed
+
+Successfully executed the following tasks using JavaScript:
+
+- Implemented a password generator that generates a password when the button is clicked.
+- Presented a series of prompts for password criteria, including length and character types.
+  - Length is validated to be at least 8 characters but no more than 128.
+  - Character types include lowercase, uppercase, numeric, and special characters.
+- Validated each input to ensure accurate and secure password generation.
+- Ensured at least one character type is selected before generating a password.
+- Displayed the generated password in an alert for user convenience.
+- Deployed the application, making it accessible for password generation.
+- Maintained a clean and polished user interface for an intuitive experience.
+- Followed best practices for file structure, naming conventions, and code quality.
+- Provided a comprehensive README with project details, live application link, and GitHub repository information.
+- Included screenshots to visually represent the generated password.
+- Encouraged exploration of the codebase and generator results.
+
+Feel free to explore the codebase and experiment with the password generator to create secure and tailored passwords.
+
+
 ## Screenshot
 
 ![Password Generator Screenshot](./assets/images/screenshot-password_generator.png)
