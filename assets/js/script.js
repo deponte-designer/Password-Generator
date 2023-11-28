@@ -111,6 +111,7 @@ function getPasswordOptions() {
   var passwordLength = Number(
     prompt("Please enter the length of the password (between 8 and 128 characters):")
   );
+  console.log(passwordLength);
 
   // Validate the password length
   if (Number.isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
@@ -120,14 +121,15 @@ function getPasswordOptions() {
 
   // Confirm the inclusion of lowercase characters
   var includeLower = confirm("Include lowercase characters?");
-  console.log();
+  console.log(includeLower);
 
   // Confirm the inclusion of uppercase characters
   var includeUpper = confirm("Include uppercase characters?");
+  console.log(includeUpper);
 
   // Confirm the inclusion of numeric characters
   var includeNumeric = confirm("Include numeric characters?");
-
+  console.log(includeNumeric);
 
 
   // Return an object with user choices
@@ -166,7 +168,7 @@ function generatePassword() {
     allChars = allChars.concat(numericCharacters);
   }
 
-  
+
 
   for (var i = 0; i < options.passwordLength; i++) {
     var randomChar = getRandom(allChars);
