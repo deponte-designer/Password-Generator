@@ -90,15 +90,15 @@ var upperCasedCharacters = [
 
 
 
-// ! Generate a password when the button is clicked
+//  Generate a password when the button is clicked
 
-// ! Present a series of prompts for password criteria
+//  Present a series of prompts for password criteria
 
 // * Length of password:
-// ! At least 8 characters but no more than 128.
+// * At least 8 characters but no more than 128.
 
-// ! Character types:
-// ! Lowercase
+//  Character types:
+// * Lowercase
 // ! Uppercase
 // ! Numeric
 // ! Special characters ($@%&*, etc)
@@ -118,9 +118,15 @@ function getPasswordOptions() {
     return;
   }
 
+  // Confirm the inclusion of lowercase characters
+  var includeLower = confirm("Include lowercase characters?");
+  console.log();
+
+
   // Return an object with user choices
   return {
     passwordLength: passwordLength,
+    includeLower: includeLower,
 
   };
 
@@ -129,7 +135,8 @@ function getPasswordOptions() {
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+  var randomIndex = Math.floor(Math.random() * arr.length);
+  return arr[randomIndex];
 }
 
 // Function to generate password with user input
@@ -137,6 +144,12 @@ function generatePassword() {
   var options = getPasswordOptions();
   var result = [];
   var allChars = [];
+
+  if (options.includeLower) {
+    allChars = allChars.concat(lowerCasedCharacters);
+  }
+
+  
 
   for (var i = 0; i < options.passwordLength; i++) {
     var randomChar = getRandom(allChars);
