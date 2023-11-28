@@ -135,6 +135,11 @@ function getPasswordOptions() {
   var includeSpecial = confirm("Include special characters?");
   console.log(includeSpecial);
 
+  // Validate that at least one character type is selected
+  if (!includeLower && !includeUpper && !includeNumeric && !includeSpecial) {
+    alert("At least one character type must be selected.");
+    return;
+  }
 
   // Return an object with user choices
   return {
