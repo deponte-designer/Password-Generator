@@ -149,7 +149,7 @@ function generatePassword() {
     allChars = allChars.concat(lowerCasedCharacters);
   }
 
-  
+
 
   for (var i = 0; i < options.passwordLength; i++) {
     var randomChar = getRandom(allChars);
@@ -169,6 +169,8 @@ function writePassword() {
   var passwordText = document.querySelector('#password');
 
   passwordText.value = password;
+  
+  console.log("Your generated password is:\n" + password);
 }
 
 // Add event listener to generate button
