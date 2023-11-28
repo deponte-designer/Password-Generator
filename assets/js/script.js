@@ -94,7 +94,7 @@ var upperCasedCharacters = [
 
 // ! Present a series of prompts for password criteria
 
-// ! Length of password:
+// * Length of password:
 // ! At least 8 characters but no more than 128.
 
 // ! Character types:
@@ -106,6 +106,24 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
+
+  // Prompt for password length
+  var passwordLength = Number(
+    prompt("Please enter the length of the password (between 8 and 128 characters):")
+  );
+
+  // Validate the password length
+  if (Number.isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
+    alert("Please enter a valid password length between 8 and 128 characters.");
+    return;
+  }
+
+  // Return an object with user choices
+  return {
+    passwordLength: passwordLength,
+
+  };
+
 
 }
 
